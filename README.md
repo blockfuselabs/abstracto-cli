@@ -1,6 +1,6 @@
 # abstracto 🚀
 
-A blazing-fast CLI tool that simplifies Account Abstraction development on Ethereum. Built in Go for performance and reliability.
+A blazing-fast CLI tool that simplifies Account Abstraction development on Ethereum. Built in Rust for performance and reliability.
 
 The primary goal of this tool is to abstract away the complexities involved in setting up and developing account abstraction contracts. By providing a straightforward interface and a set of powerful commands, aacli helps developers focus on the unique aspects of their contracts without getting bogged down by repetitive setup tasks.
 
