@@ -1,4 +1,4 @@
-# abstracto 🚀
+# abstracto-CLI 🚀
 
 A blazing-fast CLI tool that simplifies Account Abstraction development on Ethereum. Built in Rust for performance and reliability.
 
