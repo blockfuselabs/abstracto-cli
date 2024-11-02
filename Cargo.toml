@@ -1,0 +1,15 @@
+[package]
+name = "aa_cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = "4.5.20"
+ethers = "2.0.14"
+git2 = "0.19.0"
+inquire = "0.7.5"
+reqwest = "0.12.9"
+serde = "1.0.214"
+serde_json = "1.0.132"
+tokio = "1.41.0"
+zip = "2.2.0"
