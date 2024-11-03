@@ -24,16 +24,31 @@ fn setup_foundry() {
     println!(
         "Setting up an Account Abstraction project using Foundry (Non Diamond Implementation)..."
     );
-    
-    Command::new("git")
-        .args([
-            "clone",
-            "https://github.com/blockfuselabs/foundry_account_abstraction.git",
-        ])
-        .status()
-        .expect("Failed to initialize account abstraction project.");
 
-    println!("Stopped!");
+    let repo_url = "https://github.com/blockfuselabs/foundry_account_abstraction.git";
+    let local_path = "./AccountAbstraction-test";
+
+    match Repository::clone(repo_url, local_path) {
+        Ok(_) => { 
+            println!("Successfully initialize Account-Abstraction !");
+            println!("");
+            println!("=========================");
+            
+            println!("cd {}", local_path);
+            println!("cd ./src");
+            println!("Running forge build .....");
+            println!("=========================");
+            Command::new("forge")
+            .args([
+                "build"])
+            .status()
+            .expect("Failed to build account abstraction project.");
+        }
+        ,
+        Err(e) => eprintln!("Failed to clone repository: {}", e),
+    }
+
+    println!("Done!");
 }
 
 fn setup_foundry_diamond() {
